@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="repeat-coverage-v24.bb06883bd640.css">
 <script type="application/x-pa-pending" data-pa-pending="" defer data-pa-src="repeat-coverage-drag-v25.a00c265c650a.js" data-pa-original-src="repeat-coverage-drag-v25.js"></script>
 <!-- PA75-BEGIN -->
-<meta name="pa-version" content="V-2.10">
-<script id="pa-release-config" type="application/json">{"release":"V-2.10-7d2af5cb6788","version":"V-2.10","page":"repeat60"}</script>
+<meta name="pa-version" content="V-2.10.1">
+<script id="pa-release-config" type="application/json">{"release":"V-2.10.1-1ef4dffb2953","version":"V-2.10.1","page":"repeat60"}</script>
 <script>/* Primavera Analyzer: comprobación de publicación, siempre relativa al repositorio abierto. */
 (()=>{'use strict';
  const config=JSON.parse(document.getElementById('pa-release-config').textContent);
@@ -25,9 +25,9 @@
   try{const response=await fetch(url.href,{cache:'no-store',credentials:'same-origin',redirect:'error',signal:controller.signal});if(!response.ok)throw new Error('No se pudo consultar la versión publicada.');return await response.json()}finally{clearTimeout(timer)}
  }
  function validate(data){
-  if(!data||data.schema!==1||typeof data.release!=='string'||!/^V-\d+(?:\.\d+)?-[a-f0-9]{12}$/.test(data.release))throw new Error('El archivo de versión no es válido.');
+  if(!data||data.schema!==1||typeof data.release!=='string'||!/^V-\d+(?:\.\d+)*-[a-f0-9]{12}$/.test(data.release))throw new Error('El archivo de versión no es válido.');
   const name=data.pages?.[config.page];
-  if(typeof name!=='string'||!new RegExp('^'+config.page+'\\.pa[0-9]+(?:\\.[0-9]+)?\\.[a-f0-9]{12}\\.html$').test(name))throw new Error('La página publicada no es válida.');
+  if(typeof name!=='string'||!new RegExp('^'+config.page+'\\.pa[0-9]+(?:\\.[0-9]+)*\\.[a-f0-9]{12}\\.html$').test(name))throw new Error('La página publicada no es válida.');
   const url=new URL(name,root);if(url.origin!==root.origin||new URL('./',url).href!==root.href)throw new Error('La actualización debe permanecer en este repositorio.');return url;
  }
  async function scripts(){
