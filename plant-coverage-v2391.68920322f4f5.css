@@ -1,0 +1,13 @@
+/* V-2.39.1 · Controles exclusivos de coberturas Planta Externa. */
+#plantModule #coverageMenu{width:640px;max-width:calc(100vw - 24px);box-sizing:border-box;max-height:calc(100vh - 30px);display:flex;flex-direction:column;}
+#plantModule #coverageMenu.hidden{display:none;}
+#plantModule #coverageGroups{min-height:0;overflow-y:auto;overflow-x:hidden;padding:3px 3px 8px;max-height:calc(100vh - 230px);}
+#plantModule .coverage-group:hover .coverage-submenu,#plantModule .coverage-group:focus-within .coverage-submenu{position:relative;top:auto;left:auto;right:auto;min-width:0;max-width:100%;box-sizing:border-box;max-height:220px;}
+#plantModule .pe210-coverageFooter{border-top:1px solid #efdacc;padding-top:10px;flex-wrap:wrap;gap:10px;flex-shrink:0;}
+#plantModule .pe2391-coverageActions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;margin-left:auto;}
+#plantModule .pe2391-coverageActions .btn{font-size:12px;padding:7px 10px;white-space:nowrap;min-height:32px;}
+#plantModule #coverageClear{display:inline-block;margin:0;}
+#plantModule #coverageExport{color:#17365f;border-color:#17365f;}
+#plantModule #coverageDelete{color:#b93816;border-color:#dc603b;}
+#plantModule #coverageExport:disabled,#plantModule #coverageDelete:disabled{opacity:.45;cursor:not-allowed;}
+@media(max-width:580px){#plantModule #coverageMenu{left:12px;top:12px;}#plantModule .pe2391-coverageActions{width:100%;justify-content:flex-start;}#plantModule .pe2391-coverageActions .btn{flex:1;}#plantModule #coverageGroups{max-height:calc(100vh - 270px);}}
